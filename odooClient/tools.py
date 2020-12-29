@@ -22,13 +22,13 @@
 manage the configuration related to an instance of :class:`ODOO <odoorpc.ODOO>`,
 and some useful helper functions used internally in `OdooRPC`.
 """
-import collections
+from collections.abc import MutableMapping
 import re
 
 MATCH_VERSION = re.compile(r'[^\d.]')
 
 
-class Config(collections.MutableMapping):
+class Config(MutableMapping):
     """Class which manage the configuration of an
     :class:`ODOO <odoorpc.ODOO>` instance.
     .. note::
